@@ -30,6 +30,11 @@ int push_back(Vector * vector, int elements){
 	vector->elements[vector->size++] = elements; 
 }
 
+void pop_back(Vector *vector){
+	if(vector->size > 0)
+		vector->size--;
+}
+
 void print(Vector * vector) {
     printf("[");
     for(int i = 0; i < vector->size; i++) {
