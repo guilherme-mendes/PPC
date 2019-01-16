@@ -22,6 +22,14 @@ void destroy(Vector * vector){
    	vector->capacity = 0;
 }
 
+int push_back(Vector * vector, int elements){
+	if(vector->size >= vector->capacity){
+		vector->capacity = vector->capacity * 2;	
+		vector->elements = (int *)realloc(vector->elements, vector->capacity *sizeof(int));	
+	}
+	vector->elements[vector->size++] = elements; 
+}
+
 void print(Vector * vector) {
     printf("[");
     for(int i = 0; i < vector->size; i++) {
