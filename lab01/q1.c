@@ -15,9 +15,16 @@ Vector create(int capacity){
 	return v;
 }
 
+void destroy(Vector * vector){
+    free(vector->elements);
+	vector->elements = NULL;
+ 	vector->size = 0;
+   	vector->capacity = 0;
+}
+
 void print(Vector * vector) {
     printf("[");
-    for(int i = 0; i < size(vector); ++i) {
+    for(int i = 0; i < vector->size; i++) {
         printf("%d ", at(vector, i));
     }
     printf("]\n");
