@@ -60,6 +60,10 @@ int front(Vector * vector){
     return -1;
 }
 
+int at(Vector * vector, int i) {
+    return vector->elements[i];
+}
+
 void print(Vector * vector) {
     printf("[");
     for(int i = 0; i < vector->size; i++) {
