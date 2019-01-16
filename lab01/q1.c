@@ -35,6 +35,15 @@ void pop_back(Vector *vector){
 		vector->size--;
 }
 
+void erase(Vector * vector, int i){
+    if (i < vector->size){
+        for(int j = i; j < vector->size; j++){
+            vector->elements[j] = vector->elements[j+1];
+        }
+        vector->size--;
+    }
+}
+
 void print(Vector * vector) {
     printf("[");
     for(int i = 0; i < vector->size; i++) {
