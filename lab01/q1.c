@@ -1,3 +1,20 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+typedef struct Vector{
+	int capacity;
+	int size;
+	int *elements;
+}Vector;
+
+Vector create(int capacity){
+	Vector v;
+	v.size = 0;
+	v.capacity = capacity;
+	v.elements = (int *) malloc(capacity*sizeof(int));	
+	return v;
+}
+
 void print(Vector * vector) {
     printf("[");
     for(int i = 0; i < size(vector); ++i) {
