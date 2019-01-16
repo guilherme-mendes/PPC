@@ -64,6 +64,14 @@ int at(Vector * vector, int i) {
     return vector->elements[i];
 }
 
+unsigned int size(Vector * vector) {
+    return vector->size;
+}
+
+unsigned int capacity(Vector * vector) {
+    return vector->capacity;
+}
+
 void print(Vector * vector) {
     printf("[");
     for(int i = 0; i < vector->size; i++) {
