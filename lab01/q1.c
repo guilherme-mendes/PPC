@@ -48,6 +48,18 @@ void clear(Vector * vector){
     vector->size = 0;
 }
 
+int back(Vector * vector){
+    if (vector->size > 0)
+        return vector->elements[vector->size-1];
+	return -1;
+}
+
+int front(Vector * vector){
+    if (vector->size > 0)
+        return vector->elements[0];
+    return -1;
+}
+
 void print(Vector * vector) {
     printf("[");
     for(int i = 0; i < vector->size; i++) {
