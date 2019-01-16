@@ -44,6 +44,10 @@ void erase(Vector * vector, int i){
     }
 }
 
+void clear(Vector * vector){
+    vector->size = 0;
+}
+
 void print(Vector * vector) {
     printf("[");
     for(int i = 0; i < vector->size; i++) {
