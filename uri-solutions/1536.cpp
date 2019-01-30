@@ -2,8 +2,7 @@
 using namespace std;
 
 int main(){
-	
-  char c;
+  	char c;
 	int n, T1_ida, T1_vol, T2_ida, T2_vol;
 
 	cin >> n;
