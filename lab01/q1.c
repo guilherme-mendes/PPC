@@ -16,6 +16,7 @@ Vector create(int capacity){
 }
 
 void destroy(Vector * vector){
+	if(!vector) return;
     free(vector->elements);
 	vector->elements = NULL;
  	vector->size = 0;
@@ -60,7 +61,8 @@ int front(Vector * vector){
     return -1;
 }
 
-int at(Vector * vector, int i) {
+int at(Vector * vector, int i){
+	if(vector->size > i)
     return vector->elements[i];
 }
 
