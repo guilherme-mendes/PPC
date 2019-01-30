@@ -30,9 +30,6 @@
 *.exe
 *.out
 *.app
-<<<<<<< HEAD
+*.txt
 *.vscode
 *prog
-=======
-*.txt
->>>>>>> faa169a9f61f9af0c2db6e6681932b3b7742956b
